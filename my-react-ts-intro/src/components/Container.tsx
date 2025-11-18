@@ -1,9 +1,7 @@
-import type { FC, ReactNode, HTMLAttributes } from "react";
+import type { FC } from "react";
+import type { ContainerProps } from "../types/PropTypes";
 
-type ContainerProps = {
-  className?: string;
-  children: ReactNode;
-} & HTMLAttributes<HTMLDivElement>;
+
 
 const Container: FC<ContainerProps> = ({
   children,

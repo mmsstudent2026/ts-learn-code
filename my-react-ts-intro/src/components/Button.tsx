@@ -1,12 +1,5 @@
-import type { ButtonHTMLAttributes, FC, ReactNode } from "react";
-
-type ButtonVariant = "plane" | "solid" | "outline";
-
-type ButtonProps = {
-  children: ReactNode;
-  className?: string;
-  variant?: ButtonVariant;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+import type { FC } from "react";
+import type { ButtonProps, ButtonVariant } from "../types/PropTypes";
 
 const variantClasses: Record<ButtonVariant, string> = {
   plane: "",
