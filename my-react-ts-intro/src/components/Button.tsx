@@ -22,7 +22,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`px-4 py-2 ${variantClasses[variant]} ${className}`}
+      className={`px-4 py-2 duration-100 active:scale-95 ${variantClasses[variant]} ${className}`}
       {...rest}
     >
       {children}
