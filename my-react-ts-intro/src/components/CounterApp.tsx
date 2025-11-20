@@ -1,24 +1,39 @@
-import { useState, type FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import Container from "./Container";
 import Button from "./Button";
 import { Minus, Plus } from "lucide-react";
 
 const CounterApp: FC = () => {
   const [count, setCount] = useState<number>(0);
+  const [animating, setAnimating] = useState<boolean>(false);
 
   const handleAdd = (): void => {
     setCount(count + 1);
+    setAnimating(true);
   };
 
   const handleSub = (): void => {
     if (count > 0) {
       setCount(count - 1);
+      setAnimating(true);
     }
   };
 
+  useEffect(() => {
+    if (!animating) return;
+    const clearAnimating = setTimeout(() => setAnimating(false), 100);
+    return () => clearTimeout(clearAnimating);
+  }, [animating]);
+
   return (
     <Container className=" flex flex-col justify-center items-center min-h-screen gap-5 ">
-      <h1 className=" text-7xl font-bold font-mono">{count}</h1>
+      <h1
+        className={`text-7xl font-bold font-mono duration-100 ${
+          animating ? "scale-75 translate-y-3" : ""
+        }`}
+      >
+        {count}
+      </h1>
       <div className=" flex gap-5">
         <Button variant="solid" onClick={handleSub}>
           <Minus />
