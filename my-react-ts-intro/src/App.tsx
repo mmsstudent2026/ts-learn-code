@@ -4,7 +4,9 @@
 // import Button from "./components/Button";
 // import type { MouseEvent } from "react";
 
-import TaskManager from "./components/TaskManager";
+import CounterApp from "./components/CounterApp";
+
+// import TaskManager from "./components/TaskManager";
 
 function App() {
   // const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
@@ -13,7 +15,8 @@ function App() {
 
   return (
     <main>
-      <TaskManager />
+      <CounterApp />
+      {/* <TaskManager /> */}
       {/* <Container className=" p-5 space-y-5">
         <TextCard
           icon={<HomeIcon />}
