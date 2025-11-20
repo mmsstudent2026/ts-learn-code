@@ -1,10 +1,5 @@
-import type { ReactElement } from "react";
+import type { TextCardPropType } from "../types/PropTypes";
 
-type TextCardPropType = {
-  heading: string;
-  description: string;
-  icon: ReactElement;
-};
 
 function TextCard({ heading, description, icon }: TextCardPropType) {
   return (
