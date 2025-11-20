@@ -1,17 +1,20 @@
-import { Book, HomeIcon } from "lucide-react";
-import Container from "./components/Container";
-import TextCard from "./components/TextCard";
-import Button from "./components/Button";
-import type { MouseEvent } from "react";
+// import { Book, HomeIcon } from "lucide-react";
+// import Container from "./components/Container";
+// import TextCard from "./components/TextCard";
+// import Button from "./components/Button";
+// import type { MouseEvent } from "react";
+
+import TaskManager from "./components/TaskManager";
 
 function App() {
-  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
-    console.log("u click", e.target);
-  };
+  // const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+  //   console.log("u click", e.target);
+  // };
 
   return (
     <main>
-      <Container className=" p-5 space-y-5">
+      <TaskManager />
+      {/* <Container className=" p-5 space-y-5">
         <TextCard
           icon={<HomeIcon />}
           heading="Hello React & TS"
@@ -28,7 +31,7 @@ function App() {
           </Button>
           <Button variant="outline">Click Me</Button>
         </div>
-      </Container>
+      </Container> */}
     </main>
   );
 }
